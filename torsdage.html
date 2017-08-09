@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Velkommen til Choumon Aikido Dojo Holbæk</title>
+
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script src="moment-with-locales.js"></script>
+
+        <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-15865672-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <!-- End Google Analytics -->
+
+        <script>
+
+function getTeacherFromDate(now) {
+    var teachers = ['Jan H','Jan S','Lars H','Michael S','Finn'];
+    //  var startDate = new Date(2015,0,1);
+    var startDate = new Date(2016,1,4);
+    var days   = Math.floor((now - startDate)/1000/60/60/24);
+    var weeks  = Math.floor(days / 7);
+
+    // Figure out start index
+    var remainder = weeks % teachers.length;
+
+    var teacherIndex = 0;
+    if (remainder === 0) {
+	teacherIndex = teachers.length - 1;
+
+    } else {
+	teacherIndex = remainder - 1;
+    }
+
+    return teachers[teacherIndex]
+
+}
+
+
+$(document).ready(function(){
+    moment.locale("da");
+    //var startDate = new Date(2014,10,27);
+
+    var tbl = "<TABLE class=\"table table-hover\">";
+
+
+    for (i = 4; i <= (16*7); i= i + 7 ) {
+	var now = moment().isoWeekday(i)
+	tbl += "<TR><TD>" + now.format("D MMMM YYYY") + "</TD><TD>" + getTeacherFromDate(now.toDate()) + "</TD></TR>";
+
+    }
+
+    tbl += "</TABLE>";
+
+    $("#torsdag").html(tbl);
+
+
+});
+
+</script>
+
+
+
+
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- HTML header -->
+    <header>
+      <div id="logo">
+        <img src="dojo-logo.png" alt="">
+      </div>
+      <div id="site-heading">
+        <img src="dojo-titel.png" alt=x2"">
+
+      </div>
+      <ul id="nav">
+        <li class=""><a href="index.html">Hjem</a></li>
+        <li class=""><a href="omklubben.html">Om klubben</a></li>
+        <li class=""><a href="links.html">Links</a></li>
+        <li class="active"><a href="torsdage.html">Torsdag</a></li>
+        <li class=""><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </header>
+    <div id="main-contents">
+      <div class="container">
+	<div class="page-contents">
+	  <h1 class="page-title">
+	    Instruktøre om torsdage:
+	  </h1>
+	  <div id="torsdag"/>
+	  <!--
+	  <table class="table table-hover">
+	    <tbody>
+	      <tr>
+		<td>25. September 2014</td>
+		<td>Finn</td>
+	      </tr>
+	      <tr>
+		<td>2. Oktober 2014</td>
+		<td>Michael</td>
+	      </tr>
+	      <tr>
+		<td>9. Oktober 2014</td>
+		<td>Jan</td>
+	      </tr>
+	      <tr>
+		<td>16. Oktober 2014</td>
+		<td>Lars </td>
+	      </tr>
+	      <tr>
+		<td>23. Oktober 2014</td>
+		<td>David</td>
+	      </tr>
+	      <tr>
+		<td>30. Oktober 2014</td>
+		<td>Finn</td>
+	      </tr>
+	      <tr>
+		<td>6. November 2014</td>
+		<td>Michael</td>
+	      </tr>
+	      <tr>
+		<td>13. November 2014</td>
+		<td>Jan</td>
+	      </tr>
+	      <tr>
+		<td>20. November 2014</td>
+		<td>Lars</td>
+	      </tr>
+	      <tr>
+		<td>27. November 2014</td>
+		<td>David</td>
+	      </tr>
+	      <tr>
+		<td>4. December 2014</td>
+		<td>Finn</td>
+	      </tr>
+	      <tr>
+		<td>11. December 2014</td>
+		<td>Michael</td>
+	      </tr>
+	      <tr>
+		<td>18. December 2014</td>
+		<td>Jan</td>
+	      </tr>
+	      <tr>
+		<td>25. December 2014</td>
+		<td>Lars</td>
+	      </tr>
+	      <tr>
+		<td>1. Januar 2015</td>
+		<td>David</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	  -->
+
+
+	  &nbsp;
+	</div>
+
+
+
+
+
+      </div>
+
+    </div>
+
+</div>
+</div>
+<footer>
+  <!--
+      <div id="footer-quote">
+	<div class="container">
+	  <div class="contents">
+            <div class="quote-icon">
+              <i class="fa fa-quote-right"></i>
+            </div>
+            <span class="quote-name">Walt Disney</span>
+            <div class="quote-text">
+              You can design and create, and build the most wonderful place in the world. But it takes <span class="colored-text">people</span> to make the dream a reality.
+            </div>
+	  </div>
+	</div>
+      </div>
+      <div id="bottom">
+	<div class="container">
+	  <ul id="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+	  </ul>
+	  <div id="copyright">&copy; COPYRIGHT 2014 @owwwlab.  ALL RIGHTS RESERVED</div>
+	  <a id="home-circle" href="http://owwwlab.com/azee"><i class="fa fa-home"></i></a>
+	</div>
+      </div>
+      -->
+</footer>
+
+
+
+
+<!-- Include all compiled plugins (below), or include individual
+     files as needed -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
