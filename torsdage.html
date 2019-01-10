@@ -33,9 +33,9 @@
         <script>
 
 function getTeacherFromDate(now) {
-    var teachers = ['Jan H','Jan S','Kasper K','Maciek B','Michael S','Finn'];
+    var teachers = ['Jan H','Jan S','Kasper K','Michael S','Finn'];
     //  var startDate = new Date(2015,0,1);
-    var startDate = new Date(2017,7,17); // Must be a monday
+    var startDate = new Date(2017,7,31); // Must be a monday
     var days   = Math.floor((now - startDate)/1000/60/60/24);
     var weeks  = Math.floor(days / 7);
 
@@ -44,10 +44,10 @@ function getTeacherFromDate(now) {
 
     var teacherIndex = 0;
     if (remainder === 0) {
-	teacherIndex = teachers.length - 1;
+    teacherIndex = teachers.length - 1;
 
     } else {
-	teacherIndex = remainder - 1;
+    teacherIndex = remainder - 1;
     }
 
     return teachers[teacherIndex]
@@ -63,8 +63,8 @@ $(document).ready(function(){
 
 
     for (i = 4; i <= (16*7); i= i + 7 ) {
-	var now = moment().isoWeekday(i)
-	tbl += "<TR><TD>" + now.format("D MMMM YYYY") + "</TD><TD>" + getTeacherFromDate(now.toDate()) + "</TD></TR>";
+    var now = moment().isoWeekday(i)
+    tbl += "<TR><TD>" + now.format("D MMMM YYYY") + "</TD><TD>" + getTeacherFromDate(now.toDate()) + "</TD></TR>";
 
     }
 
@@ -102,81 +102,81 @@ $(document).ready(function(){
     </header>
     <div id="main-contents">
       <div class="container">
-	<div class="page-contents">
-	  <h1 class="page-title">
-	    Instruktøre om torsdage:
-	  </h1>
-	  <div id="torsdag"/>
-	  <!--
-	  <table class="table table-hover">
-	    <tbody>
-	      <tr>
-		<td>25. September 2014</td>
-		<td>Finn</td>
-	      </tr>
-	      <tr>
-		<td>2. Oktober 2014</td>
-		<td>Michael</td>
-	      </tr>
-	      <tr>
-		<td>9. Oktober 2014</td>
-		<td>Jan</td>
-	      </tr>
-	      <tr>
-		<td>16. Oktober 2014</td>
-		<td>Lars </td>
-	      </tr>
-	      <tr>
-		<td>23. Oktober 2014</td>
-		<td>David</td>
-	      </tr>
-	      <tr>
-		<td>30. Oktober 2014</td>
-		<td>Finn</td>
-	      </tr>
-	      <tr>
-		<td>6. November 2014</td>
-		<td>Michael</td>
-	      </tr>
-	      <tr>
-		<td>13. November 2014</td>
-		<td>Jan</td>
-	      </tr>
-	      <tr>
-		<td>20. November 2014</td>
-		<td>Lars</td>
-	      </tr>
-	      <tr>
-		<td>27. November 2014</td>
-		<td>David</td>
-	      </tr>
-	      <tr>
-		<td>4. December 2014</td>
-		<td>Finn</td>
-	      </tr>
-	      <tr>
-		<td>11. December 2014</td>
-		<td>Michael</td>
-	      </tr>
-	      <tr>
-		<td>18. December 2014</td>
-		<td>Jan</td>
-	      </tr>
-	      <tr>
-		<td>25. December 2014</td>
-		<td>Lars</td>
-	      </tr>
-	      <tr>
-		<td>1. Januar 2015</td>
-		<td>David</td>
-	      </tr>
-	    </tbody>
-	  </table>
-	  -->
+    <div class="page-contents">
+      <h1 class="page-title">
+        Instruktøre om torsdage:
+      </h1>
+      <div id="torsdag"/>
+      <!--
+      <table class="table table-hover">
+        <tbody>
+          <tr>
+        <td>25. September 2014</td>
+        <td>Finn</td>
+          </tr>
+          <tr>
+        <td>2. Oktober 2014</td>
+        <td>Michael</td>
+          </tr>
+          <tr>
+        <td>9. Oktober 2014</td>
+        <td>Jan</td>
+          </tr>
+          <tr>
+        <td>16. Oktober 2014</td>
+        <td>Lars </td>
+          </tr>
+          <tr>
+        <td>23. Oktober 2014</td>
+        <td>David</td>
+          </tr>
+          <tr>
+        <td>30. Oktober 2014</td>
+        <td>Finn</td>
+          </tr>
+          <tr>
+        <td>6. November 2014</td>
+        <td>Michael</td>
+          </tr>
+          <tr>
+        <td>13. November 2014</td>
+        <td>Jan</td>
+          </tr>
+          <tr>
+        <td>20. November 2014</td>
+        <td>Lars</td>
+          </tr>
+          <tr>
+        <td>27. November 2014</td>
+        <td>David</td>
+          </tr>
+          <tr>
+        <td>4. December 2014</td>
+        <td>Finn</td>
+          </tr>
+          <tr>
+        <td>11. December 2014</td>
+        <td>Michael</td>
+          </tr>
+          <tr>
+        <td>18. December 2014</td>
+        <td>Jan</td>
+          </tr>
+          <tr>
+        <td>25. December 2014</td>
+        <td>Lars</td>
+          </tr>
+          <tr>
+        <td>1. Januar 2015</td>
+        <td>David</td>
+          </tr>
+        </tbody>
+      </table>
+      -->
 
 
-	  &nbsp;
-	</div>
+      &nbsp;
+    </div>
 
 
 
@@ -191,8 +191,8 @@ $(document).ready(function(){
 <footer>
   <!--
       <div id="footer-quote">
-	<div class="container">
-	  <div class="contents">
+    <div class="container">
+      <div class="contents">
             <div class="quote-icon">
               <i class="fa fa-quote-right"></i>
             </div>
@@ -200,21 +200,21 @@ $(document).ready(function(){
             <div class="quote-text">
               You can design and create, and build the most wonderful place in the world. But it takes <span class="colored-text">people</span> to make the dream a reality.
             </div>
-	  </div>
-	</div>
+      </div>
+    </div>
       </div>
       <div id="bottom">
-	<div class="container">
-	  <ul id="social-icons">
+    <div class="container">
+      <ul id="social-icons">
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
             <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-	  </ul>
-	  <div id="copyright">&copy; COPYRIGHT 2014 @owwwlab.  ALL RIGHTS RESERVED</div>
-	  <a id="home-circle" href="http://owwwlab.com/azee"><i class="fa fa-home"></i></a>
-	</div>
+      </ul>
+      <div id="copyright">&copy; COPYRIGHT 2014 @owwwlab.  ALL RIGHTS RESERVED</div>
+      <a id="home-circle" href="http://owwwlab.com/azee"><i class="fa fa-home"></i></a>
+    </div>
       </div>
       -->
 </footer>
