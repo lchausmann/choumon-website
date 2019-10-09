@@ -33,15 +33,14 @@
         <script>
 
 function getTeacherFromDate(now) {
-    var teachers = ['Jan H','Jan S','Kasper K','Michael S','Finn'];
+    var teachers = ['Jan H','Jan S','Michael S'];
     //  var startDate = new Date(2015,0,1);
-    var startDate = new Date(2017,7,31); // Must be a monday
+    var startDate = new Date(2019,9,2); // Must be a monday
     var days   = Math.floor((now - startDate)/1000/60/60/24);
     var weeks  = Math.floor(days / 7);
 
     // Figure out start index
     var remainder = weeks % teachers.length;
-
     var teacherIndex = 0;
     if (remainder === 0) {
     teacherIndex = teachers.length - 1;
